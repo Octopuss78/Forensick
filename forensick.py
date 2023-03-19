@@ -6,6 +6,14 @@ import argparse
 import binwalk
 
 
+def logo():
+    print("   ___                             __  _     ")
+    print("  / __\__  _ __ ___ _ __  ___   _ / / | | __ ")
+    print(" / _\/ _ \| '__/ _ \ '_ \/ __| (_) |  | |/ / ")
+    print("/ / | (_) | | |  __/ | | \__ \  _| |  |   <  ")
+    print("\/   \___/|_|  \___|_| |_|___/ ( ) |  |_|\_\\")
+    print("                                  \_\       ")
+    print("                                             ")
 
 
 ##########GET INFO##########
@@ -44,26 +52,29 @@ def get_info(path):
 ############################
 
 ###########EXTRACT##########
-def extract(path):
-    #TODO
-
+#TODO
 ############################
 
 
-"""
-def parse_args():
-    parser = argparse.ArgumentParser(
-        description="A Forensic tool to help gathering info before analysis",
-        format_class=argparse.ArgumentDefaultsHelpFormatter,)
-    subparsers = parser.add_subparser(dest='mode', title="Mode")
-    subparsers.required = True
-    #continue, inspire from: https://github.com/aress31/jwtcat/blob/master/jwtcat.py
-"""
+#def parse_args():
+#    parser = argparse.ArgumentParser(
+#        description="A Forensic tool to help gathering info before analysis",
+#        format_class=argparse.ArgumentDefaultsHelpFormatter,)
+#    subparsers = parser.add_subparser(dest='mode', title="Mode")
+#    subparsers.required = True
+#    #continue, inspire from: https://github.com/aress31/jwtcat/blob/master/jwtcat.py
 
 
 def main():
+    logo()
+    if(len(sys.argv) != 2):
+        sys.exit("Invalid arguments :(")
+    logo()
     get_info(sys.argv[1])
 
 
 if __name__ == "__main__":
     main()
+
+
+
